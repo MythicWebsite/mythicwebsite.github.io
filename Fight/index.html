@@ -3,7 +3,7 @@
     <title>Save</title>
     <script
       type="text/javascript"
-      src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"
+      src="../Javascript/jquery-3.5.1.js"
     ></script>
     <script type="text/javascript" src="NPCData.js"></script>
     <script type="text/javascript" src="Save.js"></script>
@@ -16,47 +16,34 @@
         background: #232323;
         color: white;
         border: 5px solid black;
-      }
+        border-radius: 10px;}
       .inputbox {
         text-align: center;
         font: Bold 1em Helvetica;
         width: 125px;
         background: white;
-        color: black;
-      }
+        color: black;}
       .box {
         justify-content: center;
         padding: 10px;
         background: grey;
         border: 5px solid black;
-      }
-    </style>
+        border-radius: 10px;}
+</style>
   </head>
 
   <body>
-    <div
-      id="gamecontainer"
-      style="
-        padding: 5px;
-        width: 600px;
-        height: 600px;
-        background: #d1d1d1;
-        border: 5px solid black;
-      "
-    >
-      <div
-        id="gameheader"
-        style="text-align: center; font: Bold 3em Helvetica;"
-      >
-        Save Test
-      </div>
+    <div id="gamecontainer" style="padding: 5px; width: 600px; height: 600px; color:black; background: #6b5d3f; border: 5px solid black; border-radius: 2%;">
+      <p style="margin: 10px;"></p>
+      <div id="gameheader" style="text-align: center; font: Bold 3em Helvetica;">Save Test</div>
+      <p style="margin: 10px;"></p>
       <div id="loaddiv" class="box" style="text-align: center;">
         <span id="inputdir">
-          <span style="font: Bold 1em Helvetica;"> Character Name:</span>
+          <span style="font: Bold 1em Helvetica; color:#000000;"> Character Name:</span>
           <p style="margin: 0px;"></p>
           <input value="Guy" type="text" id="input" class="inputbox" />
         </span>
-        <p style="margin: 20px;"></p>
+        <p style="margin: 30px;"></p>
         <!-- <p id = "test"> &nbsp </p> -->
         <span id="load" class="button" style="margin: 16px;">Load</span>
         <p style="margin: 20px;"></p>
