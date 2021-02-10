@@ -23,6 +23,24 @@
         width: 125px;
         background: white;
         color: black;}
+      .aspectbox {
+        padding-top: 56.25%;
+        height:0px;
+        position: relative;}
+      .gamecontainer{
+        position: absolute;
+        top:0; left:0;
+        width:100%;
+        height:100%;
+        min-width: 1280px;
+        min-height: 720px;}
+      .bigcontainer{
+        padding: 1%;
+        color:black;
+        background: #6b5d3f;
+        border: thick solid #000000;
+        border-radius: 15px;
+        position: absolute;}
       .box {
         justify-content: center;
         padding: 10px;
@@ -33,52 +51,55 @@
   </head>
 
   <body>
-
-    <!-- Entire Game Container -->
-    <div id="gamecontainer" style="padding: 5px; width: 600px; height: 600px; color:black; background: #6b5d3f; border: 5px solid #000000; border-radius: 10px; position: absolute; top: 10px; left: 10px">
-      <p style="margin: 10px;"></p>
-      <div id="gameheader" style="text-align: center; font: Bold 3em Helvetica;">Save Test</div>
-      <p style="margin: 10px;"></p>
-      
-      <!--Load Box-->
-      <div id="loaddiv" class="box" style="text-align: center;">
-        <span id="inputdir">
-          <span style="font: Bold 1em Helvetica; color:#000000;"> Character Name:</span>
-          <p style="margin: 0px;"></p>
-          <input value="Guy" type="text" id="input" class="inputbox" />
-        </span>
-        <p style="margin: 30px;"></p>
-        <!-- <p id = "test"> &nbsp </p> -->
-        <span id="load" class="button" style="margin: 16px;">Load</span>
-        <p style="margin: 20px;"></p>
-      </div>
-      
-      <!--Game Box-->
-      <div id="gamediv" style="display: none;" class="box">
-        <div style="display: flex; justify-content: center;">
-          <span id="save" class="button" style="background: green;">Save</span>
+    <div class="aspectbox">
+      <div class="gamecontainer">
+        <!-- Game Container -->
+        <div id="gamecontainer" class="bigcontainer" style="width: 72.5%; height: 64%; top: 2%; left: 2%">
+          <p style="margin: 10px;"></p>
+          <div id="gameheader" style="text-align: center; font: Bold 3em Helvetica;">Save Test</div>
+          <p style="margin: 10px;"></p>
+          
+          <!--Load Box-->
+          <div id="loaddiv" class="box" style="text-align: center;">
+            <span id="inputdir">
+              <span style="font: Bold 1em Helvetica; color:#000000;"> Character Name:</span>
+              <p style="margin: 0px;"></p>
+              <input value="Guy" type="text" id="input" class="inputbox" />
+            </span>
+            <p style="margin: 30px;"></p>
+            <!-- <p id = "test"> &nbsp </p> -->
+            <span id="load" class="button" style="margin: 16px;">Load</span>
+            <p style="margin: 20px;"></p>
+          </div>
+          
+          <!--Game Box-->
+          <div id="gamediv" style="display: none;" class="box">
+            <div style="display: flex; justify-content: center;">
+              <span id="save" class="button" style="background: green;">Save</span>
+            </div>
+            <p style="margin: 10px;"></p>
+            <div style="display: flex; justify-content: space-around;">
+              <span id="stbutton" class="button">Train Strength</span>
+              <span id="dfbutton" class="button">Train Defence</span>
+              <span id="hpbutton" class="button">Train HP</span>
+            </div>
+          </div>
+          <p style="margin: 10px;"></p>
+          
+          <!--Info Box-->
+          <div id="gametext" style='display: none; color:rgb(0, 0, 0);font: Bold 1.5em "Helvetica"' class="box">
+            <div> gay farts </div>
+          </div>
         </div>
-        <p style="margin: 10px;"></p>
-        <div style="display: flex; justify-content: space-around;">
-          <span id="stbutton" class="button">Train Strength</span>
-          <span id="dfbutton" class="button">Train Defence</span>
-          <span id="hpbutton" class="button">Train HP</span>
-        </div>
-      </div>
-      <p style="margin: 10px;"></p>
-      
-      <!--Info Box-->
-      <div id="gametext" style='display: none; color:rgb(0, 0, 0);font: Bold 1.5em "Helvetica"' class="box">
-        <div> gay farts </div>
-      </div>
-    </div>
 
-    <!-- Guy Container -->
-    <div id="guycontainer" style="display: none; padding: 5px; width: 200px; height: 600px; color:black; background: #6b5d3f; border: 5px solid #000000; border-radius: 10px; position: absolute; top: 10px; left: 635px">
-      <div id="guybox" class="box" style="height:20%; justify-content: center; display: flex">
-        
-      
-        <img src="../Images/SwordGuy.png" style="image-rendering: high-quality" alt="There's supposed to be some dipshit with a sword here." >
+        <!-- Guy Container -->
+        <div id="guycontainer" class="bigcontainer" style="display: none; width: 18.5%; height: 64%; top: 2%; right:.5%">
+          <div id="guybox" class="box" style="height:20%; justify-content: center; display: flex">
+            
+          
+            <img src="../Images/SwordGuy.png" style="image-rendering: high-quality" alt="There's supposed to be some dipshit with a sword here." >
+          </div>
+        </div>
       </div>
     </div>
   </body>
