@@ -1,18 +1,18 @@
 $(document).ready(function() {
-	var player = new Object()
+	var player = new Object({});
 	var playername = null
 	var aName = null
 	console.log(NPC.Ted.int)
 	//Functions
 	function savedata(loc,thedata) {
 		localStorage.setItem(loc, JSON.stringify(thedata))
-	};
+	}
 	function loaddata(loc) {
 		player = JSON.parse(localStorage.getItem(loc))
-	};
+	}
 	function getE(ele) {
 		return document.getElementById(ele)
-	};
+	}
 
 	//Actual content
 	getE("input").focus()
@@ -21,7 +21,7 @@ $(document).ready(function() {
 		if (event.keyCode === 13) {
 			event.preventDefault();
 			getE("load").click();
-		};
+		}
 	});
 	$("#save").click(function(){
 		console.log("Player saved " + playername + ".")
