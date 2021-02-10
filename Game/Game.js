@@ -53,6 +53,7 @@ $(document).ready(function() {
 			getE("loaddiv").style.display = "none";
 			getE("gametext").style.display = "block";
 			getE("gamediv").style.display = "block";
+			getE("guycontainer").style.display = "inline-block";
 			getE("gameheader").innerHTML = aName + "'s game";
 			getE("gametext").innerHTML = aName + "'s game has been loaded.";
 		}
