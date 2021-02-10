@@ -3,6 +3,7 @@ $(document).ready(function() {
 	var playername = null
 	var aName = null
 	console.log(NPC.Ted.int)
+	
 	//Functions
 	function savedata(loc,thedata) {
 		localStorage.setItem(loc, JSON.stringify(thedata))
@@ -15,6 +16,8 @@ $(document).ready(function() {
 	}
 
 	//Actual content
+
+  //Set input field to focus and load if enter pressed
 	getE("input").focus()
 	getE("input").select()
 	getE("input").addEventListener("keyup",function(event) {
@@ -23,17 +26,21 @@ $(document).ready(function() {
 			getE("load").click();
 		}
 	});
+	
+	//Save on button press
 	$("#save").click(function(){
 		console.log("Player saved " + playername + ".")
 		savedata(playername,player);
 	});
+	
+	//Load on button press
 	$("#load").click(function(){
 		aName = getE('input').value.trim()
 		playername = getE('input').value.toLowerCase().trim()
 		// console.log("User typed " + playername)
 		if (!!playername){
 			if (localStorage.getItem(playername) === null){
-				console.log("Created new player data for " + playername + ".")
+				console.log("Created new player data for " + aName + ".")
 				player.hp = 10
 				player.st = 2
 				player.df = 2
@@ -53,16 +60,22 @@ $(document).ready(function() {
 			console.log('Unable to load "' + playername + '".')
 		}
 	});
+	
+	//Train ST on button press
 	$("#stbutton").click(function(){
 		player.st = player.st+1
 		console.log(aName + " Strength is now " + player.st)
 		getE("gametext").innerHTML = aName + "'s Strength is now " + player.st;
 	});
+	
+	//Train DF on button press
 	$("#dfbutton").click(function(){
 		player.df = player.df+1
 		console.log(aName + " Defence is now " + player.df)
 		getE("gametext").innerHTML = aName + "'s Defence is now " + player.df;
 	});
+	
+	//Train HP on button press
 	$("#hpbutton").click(function(){
 		player.hp = player.hp+1
 		console.log(aName + " HP is now " + player.hp)
