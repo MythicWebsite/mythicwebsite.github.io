@@ -32,9 +32,7 @@ $(document).ready(function() {
 		playername = getE('input').value.toLowerCase().trim()
 		// console.log("User typed " + playername)
 		if (!!playername){
-			
 			if (localStorage.getItem(playername) === null){
-				
 				console.log("Created new player data for " + playername + ".")
 				player.hp = 10
 				player.st = 2
@@ -46,8 +44,10 @@ $(document).ready(function() {
 				console.log("Player loaded " + playername + ".");
 			}
 			getE("loaddiv").style.display = "none";
+			getE("gametext").style.display = "block";
 			getE("gamediv").style.display = "block";
 			getE("gameheader").innerHTML = aName + "'s game";
+			getE("gametext").innerHTML = aName + "'s game has been loaded.";
 		}
 		else {
 			console.log('Unable to load "' + playername + '".')
@@ -56,14 +56,17 @@ $(document).ready(function() {
 	$("#stbutton").click(function(){
 		player.st = player.st+1
 		console.log(aName + " Strength is now " + player.st)
+		getE("gametext").innerHTML = aName + "'s Strength is now " + player.st;
 	});
 	$("#dfbutton").click(function(){
 		player.df = player.df+1
 		console.log(aName + " Defence is now " + player.df)
+		getE("gametext").innerHTML = aName + "'s Defence is now " + player.df;
 	});
 	$("#hpbutton").click(function(){
 		player.hp = player.hp+1
 		console.log(aName + " HP is now " + player.hp)
+		getE("gametext").innerHTML = aName + "'s HP is now " + player.hp;
 	});
 
 
